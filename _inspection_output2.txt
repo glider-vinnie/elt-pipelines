@@ -1,0 +1,64 @@
+SHAPE: (4803, 24)
+
+
+--- title (first 5) ---
+  [0] Avatar
+  [1] Pirates of the Caribbean: At World's End
+  [2] Spectre
+  [3] The Dark Knight Rises
+  [4] John Carter
+
+--- genres (first 5) ---
+  [0] Action Adventure Fantasy Science Fiction
+  [1] Adventure Fantasy Action
+  [2] Action Adventure Crime
+  [3] Action Crime Drama Thriller
+  [4] Action Adventure Science Fiction
+
+--- vote_average (first 5) ---
+  [0] 7.2
+  [1] 6.9
+  [2] 6.3
+  [3] 7.6
+  [4] 6.1
+
+--- vote_count (first 5) ---
+  [0] 11800
+  [1] 4500
+  [2] 4466
+  [3] 9106
+  [4] 2124
+
+--- release_date (first 5) ---
+  [0] 2009-12-10
+  [1] 2007-05-19
+  [2] 2015-10-26
+  [3] 2012-07-16
+  [4] 2012-03-07
+
+--- overview (first 5) ---
+  [0] In the 22nd century, a paraplegic Marine is dispatched to the moon Pandora on a unique mission, but becomes torn between following orders and protecting an alien civilization.
+  [1] Captain Barbossa, long believed to be dead, has come back to life and is headed to the edge of the Earth with Will Turner and Elizabeth Swann. But nothing is quite as it seems.
+  [2] A cryptic message from Bond’s past sends him on a trail to uncover a sinister organization. While M battles political forces to keep the secret service alive, Bond peels back the layers of deceit to reveal the terrible truth behind SPECTRE.
+  [3] Following the death of District Attorney Harvey Dent, Batman assumes responsibility for Dent's crimes to protect the late attorney's reputation and is subsequently hunted by the Gotham City Police Department. Eight years later, Batman encounters the mysterious Selina Kyle and the villainous Bane, a new terrorist leader who overwhelms Gotham's finest. The Dark Knight resurfaces to protect a city that has branded him an enemy.
+  [4] John Carter is a war-weary, former military captain who's inexplicably transported to the mysterious and exotic planet of Barsoom (Mars) and reluctantly becomes embroiled in an epic conflict. It's a world on the brink of collapse, and Carter rediscovers his humanity when he realizes the survival of Barsoom and its people rests in his hands.
+
+--- director (first 5) ---
+  [0] James Cameron
+  [1] Gore Verbinski
+  [2] Sam Mendes
+  [3] Christopher Nolan
+  [4] Andrew Stanton
+
+
+All columns: ['index', 'budget', 'genres', 'homepage', 'id', 'keywords', 'original_language', 'original_title', 'overview', 'popularity', 'production_companies', 'production_countries', 'release_date', 'revenue', 'runtime', 'spoken_languages', 'status', 'tagline', 'title', 'vote_average', 'vote_count', 'cast', 'crew', 'director']
+Missing values:
+  genres: 28
+  homepage: 3091
+  keywords: 412
+  overview: 3
+  release_date: 1
+  runtime: 2
+  tagline: 844
+  cast: 43
+  director: 30
