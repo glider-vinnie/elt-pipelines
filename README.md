@@ -2,55 +2,11 @@
 
 A Python ETL pipeline that **extracts** movie data from a Kaggle dataset, **transforms** it with cleaning and enrichment, and **loads** it into a SQLite database.
 
-## Pipeline Overview
-
-```
-Extract  ──>  Transform  ──>  Load  ──>  Analyze  ──>  Automate
-  (1)           (2)           (3)          (4)           (5)
-   ✅            ✅            ✅           ⏳            ⏳
-```
-
 | Step | Script | Input | Output |
 |------|--------|-------|--------|
 | **Extract** | `extract.py` | Kaggle CSV | `data/raw_movies.csv` |
 | **Transform** | `transform.py` | `data/raw_movies.csv` | `data/cleaned_movies.csv` |
 | **Load** | `load.py` | `data/cleaned_movies.csv` | `db/movies.db` |
-
-## Quick Start
-
-```bash
-# 1. Create virtual environment
-python -m venv .venv
-.venv\Scripts\activate        # Windows
-# source .venv/bin/activate   # Mac/Linux
-
-# 2. Install dependencies
-pip install pandas numpy
-
-# 3. Run the full pipeline
-python extract.py
-python transform.py
-python load.py
-```
-
-## Project Structure
-
-```
-pipeline/
-├── extract.py              # Step 1: Read Kaggle CSV, validate schema, save raw
-├── transform.py            # Step 2: Clean, enrich, filter, validate
-├── load.py                 # Step 3: Load into SQLite with metadata tracking
-├── data/
-│   ├── raw_movies.csv      # 4,802 rows (output of extract)
-│   └── cleaned_movies.csv  # 4,157 rows (output of transform)
-├── db/
-│   └── movies.db           # SQLite database (2 tables, 5 indexes)
-├── log/
-│   ├── transform.log       # Transform phase log
-│   └── load.log            # Load phase log
-├── .gitignore
-└── README.md
-```
 
 ## Pipeline Details
 
@@ -122,31 +78,6 @@ CREATE TABLE load_metadata (
     error_message    TEXT
 );
 ```
-
-## Sample Data
-
-| Title | Year | Rating | Votes | Genre | Rating Category |
-|-------|------|--------|-------|-------|-----------------|
-| Avatar | 2009 | 7.2 | 11,800 | Action Adventure Fantasy Sci-Fi | Good |
-| Spectre | 2015 | 6.3 | 4,466 | Action Adventure Crime | Average |
-| The Dark Knight Rises | 2012 | 7.6 | 9,106 | Action Crime Drama Thriller | Good |
-| John Carter | 2012 | 6.1 | 2,124 | Action Adventure Sci-Fi | Average |
-| Interstellar | 2014 | 8.1 | 7,800 | Adventure Drama Sci-Fi | Excellent |
-
-## Dataset Stats
-
-- **4,157 movies** (1980–2016)
-- **Average rating**: 6.19
-- **Rating distribution**: Poor 41.8%, Average 42.3%, Good 15.2%, Excellent 0.7%
-- **Top decades**: 2000s (1,896), 2010s (1,276), 1990s (720)
-
-## Requirements
-
-- Python 3.10+
-- pandas
-- numpy
-- sqlite3 (built-in)
-
 ## Data Source
 
 [Kaggle: Movies Dataset](https://www.kaggle.com/datasets/abdallahwagih/movies) by Abdallah Wagih — 4,803 movies with ratings, genres, cast, crew, and more.
