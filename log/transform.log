@@ -1,0 +1,42 @@
+19:01:23 | INFO     | Loaded 4802 rows, 5 columns from data\raw_movies.csv
+19:01:23 | INFO     | Removed 0 exact duplicate rows
+19:01:23 | INFO     | Removed 0 title+year duplicate rows
+19:01:23 | INFO     | Duplicates: 4802 -> 4802 rows (-0)
+19:01:23 | INFO     | Missing values before: {'title': 0, 'year': 0, 'rating': 0, 'votes': 0, 'genre': 0}
+19:01:23 | INFO     | Dropped 0 rows with missing year
+19:01:23 | INFO     | No missing ratings - no action needed
+19:01:23 | INFO     | Filled 0 missing genres with 'Unknown'
+19:01:23 | INFO     | Filled 0 missing votes with 0
+19:01:23 | INFO     | Filled 0 missing titles with 'Untitled'
+19:01:23 | INFO     | Missing values after: {'title': 0, 'year': 0, 'rating': 0, 'votes': 0, 'genre': 0}
+19:01:23 | INFO     | Converted year->int, rating->float, votes->int
+19:01:23 | INFO     | Cleaned titles: stripped whitespace, applied title case
+19:01:23 | INFO     | Cleaned genres: stripped whitespace
+19:01:23 | INFO     | Dropped 0 rows with rating outside 0-10 range
+19:01:23 | INFO     | Dropped 0 rows with year outside 1900-2026
+19:01:23 | INFO     | Data types: {'title': <StringDtype(storage='python', na_value=nan)>, 'year': dtype('int64'), 'rating': dtype('float64'), 'votes': dtype('int64'), 'genre': <StringDtype(storage='python', na_value=nan)>}
+19:01:23 | INFO     | Created movie_age column (sample: [17, 19, 11])
+19:01:23 | INFO     | Created decade column (sample: [2000, 2000, 2010])
+19:01:23 | INFO     | Created rating_category column - distribution: {'Poor': 2046, 'Average': 1947, 'Good': 759, 'Excellent': 50}
+19:01:23 | INFO     | Created votes_category column - distribution: {'Low': 3881, 'Moderate': 914, 'Popular': 7, 'Very Popular': 0}
+19:01:23 | WARNING  | Flagged 4 suspect entries (rating=10, votes<5):
+19:01:23 | WARNING  |   -> 'Stiff Upper Lips' (1998) rating=10.0 votes=1
+19:01:23 | WARNING  |   -> 'Dancer, Texas Pop. 81' (1998) rating=10.0 votes=1
+19:01:23 | WARNING  |   -> 'Me You And Five Bucks' (2015) rating=10.0 votes=2
+19:01:23 | WARNING  |   -> 'Little Big Top' (2006) rating=10.0 votes=1
+19:01:23 | INFO     | Filter year >= 1980: 4802 -> 4550 rows
+19:01:23 | INFO     | Filter votes >= 10: 4550 -> 4159 rows
+19:01:23 | INFO     | Filter title >= 2 chars: 4159 -> 4157 rows
+19:01:23 | INFO     | Removed 0 suspect entries
+19:01:23 | INFO     | Filtering done: 4802 -> 4157 rows total
+19:01:23 | INFO     | --- Final Validation ---
+19:01:23 | INFO     |   [PASS] No duplicates
+19:01:23 | INFO     |   [PASS] No null in title
+19:01:23 | INFO     |   [PASS] No null in year
+19:01:23 | INFO     |   [PASS] No null in rating
+19:01:23 | INFO     |   [PASS] No null in votes
+19:01:23 | INFO     |   [PASS] Rating in 0-10
+19:01:23 | INFO     |   [PASS] Year in 1980-2026
+19:01:23 | INFO     |   [PASS] Votes >= 10
+19:01:23 | INFO     | All validation checks PASSED!
+19:01:23 | INFO     | Saved 4157 cleaned rows -> data\cleaned_movies.csv

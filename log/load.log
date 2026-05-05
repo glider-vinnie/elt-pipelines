@@ -1,0 +1,21 @@
+19:03:18 | INFO     | Read 4157 rows from data\cleaned_movies.csv
+19:03:18 | INFO     | Connected to database: db\movies.db
+19:03:18 | INFO     | Tables created (movies, load_metadata)
+19:03:18 | INFO     | Created 5 indexes
+19:03:19 | INFO     | Inserted 4157 rows, skipped 0 duplicates
+19:03:19 | INFO     | --- Load Validation ---
+19:03:19 | INFO     |   [PASS] Row count: 4157 in DB (expected >= 4157)
+19:03:19 | INFO     |   [PASS] No NULLs in title (0 found)
+19:03:19 | INFO     |   [PASS] No NULLs in year (0 found)
+19:03:19 | INFO     |   [PASS] No NULLs in rating (0 found)
+19:03:19 | INFO     |   [PASS] No NULLs in votes (0 found)
+19:03:19 | INFO     |   Spot-check 5 random rows:
+19:03:19 | INFO     |     -> The Sweeney (2012) rating=5.7 votes=109
+19:03:19 | INFO     |     -> Elizabethtown (2005) rating=6.1 votes=327
+19:03:19 | INFO     |     -> The Lovers (2015) rating=4.8 votes=34
+19:03:19 | INFO     |     -> Saving Mr. Banks (2013) rating=7.3 votes=1226
+19:03:19 | INFO     |     -> The Replacement Killers (1998) rating=6.0 votes=127
+19:03:19 | INFO     |   [PASS] Indexes present: ['idx_title', 'idx_year', 'idx_rating', 'idx_genre', 'idx_rating_category']
+19:03:19 | INFO     | All validation checks PASSED!
+19:03:19 | INFO     | Metadata logged: run=run_20260505_190318_23c4b3 status=success rows=4157
+19:03:19 | INFO     | Database connection closed
