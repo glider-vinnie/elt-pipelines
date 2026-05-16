@@ -17,6 +17,8 @@ with open('_inspection_output2.txt', 'w', encoding='utf-8') as f:
     f.write(f"Missing values:\n")
     for col in df.columns:
         nulls = df[col].isnull().sum()
+        if nulls > 0:
+            f.write(f"  {col}: {nulls}\n")
        
             
 print("Done -> _inspection_output2.txt")
