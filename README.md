@@ -1,13 +1,6 @@
 # Movie Ratings ETL Pipeline
 
 A Python ETL pipeline that **extracts** movie data from a Kaggle dataset, **transforms** it with cleaning and enrichment, and **loads** it into a SQLite database.
-
-| Step | Script | Input | Output |
-|------|--------|-------|--------|
-| **Extract** | `extract.py` | Kaggle CSV | `data/raw_movies.csv` |
-| **Transform** | `transform.py` | `data/raw_movies.csv` | `data/cleaned_movies.csv` |
-| **Load** | `load.py` | `data/cleaned_movies.csv` | `db/movies.db` |
-
 ## Pipeline Details
 
 ### 1. Extract (`extract.py`)
