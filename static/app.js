@@ -1,7 +1,4 @@
-/**
- * app.js — Movie Ratings Dashboard Client
- * Fetches data from Flask APIs and renders interactive charts + table.
- */
+
 
 // ── State ────────────────────────────────────────────────────────
 const state = {
