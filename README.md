@@ -71,6 +71,3 @@ CREATE TABLE load_metadata (
     error_message    TEXT
 );
 ```
-## Data Source
-
-[Kaggle: Movies Dataset](https://www.kaggle.com/datasets/abdallahwagih/movies) by Abdallah Wagih — 4,803 movies with ratings, genres, cast, crew, and more.
